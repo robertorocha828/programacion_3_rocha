@@ -1,0 +1,119 @@
+# =========================
+# Dependencias
+# =========================
+node_modules/
+**/node_modules/
+
+# =========================
+# Build / Output
+# =========================
+dist/
+build/
+.next/
+out/
+coverage/
+**/dist/
+**/build/
+**/.next/
+**/out/
+**/coverage/
+
+# =========================
+# Logs
+# =========================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# =========================
+# Archivos de entorno
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# Sistema operativo
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# IDE / Editores
+# =========================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# =========================
+# Cache / temporales
+# =========================
+.cache/
+.temp/
+.tmp/
+**/.cache/
+**/.temp/
+**/.tmp/
+
+# =========================
+# Testing
+# =========================
+coverage/
+jest.config.tsbuildinfo
+*.lcov
+
+# =========================
+# Typescript
+# =========================
+*.tsbuildinfo
+
+# =========================
+# Package managers
+# =========================
+.pnpm-store/
+.npm/
+.yarn/
+.yarn/cache/
+.yarn/unplugged/
+.yarn/build-state.yml
+.yarn/install-state.gz
+
+# =========================
+# Archivos de lock (opcional)
+# =========================
+# Descomenta si NO quieres versionarlos
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# =========================
+# NestJS específicos
+# =========================
+**/dist/
+**/node_modules/
+
+# =========================
+# React específicos
+# =========================
+**/.eslintcache
+
+# =========================
+# Archivos de Docker (opcional)
+# =========================
+docker-compose.override.yml
+
+# =========================
+# Otros
+# =========================
+*.tgz
+*.tar.gz
+*.zip
+
+# =========================
+# Archivos locales personalizados
+# =========================
+*.local
