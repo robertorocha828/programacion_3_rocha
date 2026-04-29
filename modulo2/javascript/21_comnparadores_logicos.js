@@ -43,14 +43,6 @@ const ciudad = usuario.direccion && usuario.direccion.ciudad;
 // Si usuario.direccion no existe (falsy), ciudad = undefined (no lanza error)
 console.log(ciudad)
 
-
-
-
-
-
-
-
-
 // Uso booleano clásico
 console.log(true || false);   // true
 console.log(false || true);   // true
@@ -74,10 +66,6 @@ function saludar(nombre) {
 saludar("Ana");    // Hola, Ana
 saludar("");       // Hola, Invitado  (string vacío es falsy)
 saludar(null);     // Hola, Invitado
-
-
-
-
 
 
 console.log(!true);     // false
