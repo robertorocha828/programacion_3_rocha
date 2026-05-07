@@ -180,3 +180,14 @@ const anidado = [[1, 2], [3, 4], [5, 6]];
 const plano   = anidado.reduce((acum, arr) => [...acum, ...arr], []);
 console.log(plano);   // [1, 2, 3, 4, 5, 6]
 // alternativa moderna: anidado.flat()
+
+
+// Ejercio en clase 
+const celsius = [0, 15, -5, 22, 37, 100, -10, 28];
+
+const celsius_mayores = celsius.filter(n => n >= 0 && n <= 30);
+console.log(celsius_mayores)
+const fahrenheit = celsius_mayores.map(n => (n * 9/5) + 32);
+console.log(fahrenheit);
+
+
