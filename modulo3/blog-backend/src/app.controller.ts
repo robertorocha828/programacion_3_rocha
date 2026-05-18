@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Param, Post } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
 import { AppService } from './app.service';
 import { ProductDto } from './product.dto';
 
@@ -7,26 +7,38 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get("/health")
-  getHeath(): any {
-    return this.appService.getHeath();
+  getHealth(): any {
+    return this.appService.getHealth();
   }
 
-  @Post("/products")
-  createProducto(@Body() product:ProductDto): ProductDto{
-    return this.appService.createProducto(product);
+   @Post("/products")
+  createProduct(@Body() product: ProductDto): ProductDto {
+    return this.appService.createProduct(product);
   }
 
   @Get("/products")
-  findAll(): ProductDto[]{
+  findAll(): ProductDto[] {
     return this.appService.findAll();
   }
 
-  @Get("/products")
-  findById(@Param('id') id:string): ProductDto[]{
+  @Get("/products/:id")
+  findBYId(@Param('id') id: string): ProductDto {
     return this.appService.findById(id);
   }
 
+  @Put("/products/:id")
+  update(@Param('id') id: string,
+  @Body() updateProductDto: ProductDto): any {
+    return this.appService.update(id, updateProductDto);
+  }
 
+  @Delete("/products/:id")
+  delete(@Param('id') id: string): ProductDto {
+    return this.appService.delete(id);
+  }
+
+  @Post("/area-triangulo")
+  areaTriangulo(@Body() data: any): any {
+  return this.appService.areaTriangulo(data);
+  }
 }
-
-
