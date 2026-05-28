@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas</title>
+</head>
+
+<body>
+    <h1>Participantes inscritos</h1>
+
+    <table border="1">
+        <tr>
+            <th>Nombre</th>
+            <th>Sacramento</th>
+            <th>Ciudad</th>
+        </tr>
+        <tr>
+            <td>María Pérez</td>
+            <td>Bautismo</td>
+            <td>Quito</td>
+        </tr>
+        <tr>
+            <td>Carlos Ortega</td>
+            <td>Confirmación</td>
+            <td>Guayaquil</td>
+        </tr>
+        <tr>
+            <td>Ana Torres</td>
+            <td>Matrimonio</td>
+            <td>Cuenca</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <h1>Cursos disponibles</h1>
+
+    <table border="2">
+        <thead>
+            <tr>
+                <th>Curso</th>
+                <th>Duración</th>
+                <th>Cupos</th>
+                <th>Costo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Prebautismal</td>
+                <td>2 sesiones</td>
+                <td>20</td>
+                <td>$10</td>
+            </tr>
+            <tr>
+                <td>Primera Comunión</td>
+                <td>1 año</td>
+                <td>30</td>
+                <td>$15</td>
+            </tr>
+            <tr>
+                <td>Confirmación</td>
+                <td>6 meses</td>
+                <td>25</td>
+                <td>$20</td>
+            </tr>
+            <tr>
+                <td>Prematrimonial</td>
+                <td>3 semanas</td>
+                <td>15</td>
+                <td>$30</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Total</td>
+                <td>-</td>
+                <td>90 cupos</td>
+                <td>-</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <hr>
+
+    <h1>Asistencia por sesión</h1>
+
+    <table border="2">
+        <thead>
+            <tr>
+                <th scope="col">Participante</th>
+                <th scope="col">Sesión 1</th>
+                <th scope="col">Sesión 2</th>
+                <th scope="col">Sesión 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td scope="row">María Pérez</td>
+                <td>Asistió</td>
+                <td>Asistió</td>
+                <td>Faltó</td>
+            </tr>
+            <tr>
+                <td scope="row">Carlos Ortega</td>
+                <td>Asistió</td>
+                <td>Asistió</td>
+                <td>Asistió</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <h1>Horarios por parroquia</h1>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th rowspan="2">Parroquia</th>
+                <th colspan="3">Días disponibles</th>
+                <th rowspan="2">Cupos</th>
+            </tr>
+            <tr>
+                <th>Lunes</th>
+                <th>Miércoles</th>
+                <th>Sábado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>San Francisco</td>
+                <td>Sí</td>
+                <td>No</td>
+                <td>Sí</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>El Belén</td>
+                <td>No</td>
+                <td>Sí</td>
+                <td>Sí</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>Santa Teresita</td>
+                <td>Sí</td>
+                <td>Sí</td>
+                <td>No</td>
+                <td>25</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <h1>Registro 2025</h1>
+
+    <table border="1">
+        <caption>Participantes inscritos - Primer Trimestre 2026</caption>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Sacramento</th>
+                <th>Parroquia</th>
+                <th>Sesiones asistidas</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>María Pérez</td>
+                <td>Bautismo</td>
+                <td>San Francisco</td>
+                <td>2</td>
+                <td>Completado</td>
+            </tr>
+            <tr>
+                <td>Carlos Ortega</td>
+                <td>Confirmación</td>
+                <td>El Belén</td>
+                <td>8</td>
+                <td>En curso</td>
+            </tr>
+            <tr>
+                <td>Ana Torres</td>
+                <td>Matrimonio</td>
+                <td>Santa Teresita</td>
+                <td>3</td>
+                <td>Completado</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Total inscritos</th>
+                <td colspan="4">3 participantes</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <hr>
+
+    <h1>Asistencia</h1>
+
+    <table border="1">
+        <caption>Resumen de asistencia</caption>
+        <thead>
+            <tr>
+                <th>Catequista</th>
+                <th>Bautismo</th>
+                <th>Primera Comunión</th>
+                <th>Confirmación</th>
+                <th>Promedio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>María Flores</td>
+                <td>95%</td>
+                <td>88%</td>
+                <td>90%</td>
+                <td>91%</td>
+            </tr>
+            <tr>
+                <td>Juan Mora</td>
+                <td>80%</td>
+                <td>85%</td>
+                <td>78%</td>
+                <td>81%</td>
+            </tr>
+            <tr>
+                <td>Rosa Delgado</td>
+                <td>100%</td>
+                <td>92%</td>
+                <td>96%</td>
+                <td>96%</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Promedio general</th>
+                <td>91.7%</td>
+                <td>88.3%</td>
+                <td>88%</td>
+                <td>89.3%</td>
+            </tr>
+        </tfoot>
+    </table>
+ 
+    <hr>
+ 
+    <h1>Horario semanal de cursos</h1>
+
+    <table border="2">
+        <colgroup>
+            <col style="background-color: antiquewhite;">
+            <col style="background-color: aquamarine;">
+            <col style="background-color: bisque;">
+            <col style="background-color: gold;">
+        </colgroup>
+        <tbody>
+            <tr>
+                <td>Parroquia San Francisco</td>
+                <td>Lunes</td>
+                <td>Miércoles</td>
+                <td>Sábado</td>
+            </tr>
+            <tr>
+                <td>Catequesis Bautismo</td>
+                <td>9:00 am</td>
+                <td>-</td>
+                <td>9:00 am</td>
+            </tr>
+            <tr>
+                <td>Primera Comunión</td>
+                <td>-</td>
+                <td>15:00 pm</td>
+                <td>10:00 am</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+</body>
+
+</html>
