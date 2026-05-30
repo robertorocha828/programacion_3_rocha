@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos de Sacramentos</title>
+    <link rel="stylesheet" href="04_display_mp.css">
+    <link rel="stylesheet" href="04_reset.css">
+</head>
+
+<body>
+    <h1 style="color: red;">Ofertas</h1>
+    <div class="banner-oferta">📢 Inscripciones abiertas: Curso de Confirmación 2026 - Descuento del 20 %</div>
+
+    <div class="etiqueta-nuevo">Nuevo curso disponible</div>
+    
+    <button class="btn-carrito">Inscribirse al curso</button>
+
+    <button onclick="toggleMenu()">Menu</button>
+    <div class="menu-movil" id="menu">
+        <ul>
+            <li><a href="#">Bautismo</a></li>
+            <li><a href="#">Primera Comunión</a></li>
+            <li><a href="#">Confirmación</a></li> 
+        </ul>
+    </div>
+    <script>
+        function toggleMenu(){
+            const menu = document.getElementById('menu')
+            menu.classList.toggle('activo')
+        }
+    </script>
+
+</body>
+</html>
