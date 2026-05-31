@@ -23,6 +23,8 @@ console.log(`[${colorAlerta.toUpperCase()}] Cuenta: ${estadoCuenta}`);
 // [ROJO] Cuenta: En descubierto
 
 // ❌ No anidar ternarios — difícil de leer y de mantener
+const edad = 17;
+
 const categoriaEdad = edad >= 65 ? "senior" : edad >= 18 ? "adulto" : "menor";
 
 // ✅ Mejor usar if/else if para tres o más casos

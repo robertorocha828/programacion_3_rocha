@@ -51,7 +51,7 @@ console.log(calculadora.restar(10, 3));      // 7
 console.log(calculadora.multiplicar(2, 5));  // 10
 
 //this dentro de métodos
-const persona = {
+const persona1 = {
   nombre: "Ana",
   edad: 28,
 
@@ -71,9 +71,9 @@ const persona = {
   }
 };
 
-console.log(persona.saludar());      // "Hola, soy Ana y tengo 28 años."
-console.log(persona.cumpleaños());   // "¡Feliz cumpleaños, Ana! Ahora tienes 29."
-console.log(persona.saludarArrow()); // "Hola, soy undefined"
+console.log(persona1.saludar());      // "Hola, soy Ana y tengo 28 años."
+console.log(persona1.cumpleaños());   // "¡Feliz cumpleaños, Ana! Ahora tienes 29."
+console.log(persona1.saludarArrow()); // "Hola, soy undefined"
 
 
 
@@ -84,7 +84,7 @@ const edad   = 28;
 const ciudad = "Madrid";
 
 // Sin shorthand — repetitivo
-const persona1 = {
+const persona3 = {
   nombre: nombre,
   edad: edad,
   ciudad: ciudad

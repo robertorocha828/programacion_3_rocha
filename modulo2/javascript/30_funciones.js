@@ -1,105 +1,105 @@
-// // funcion declarada
-// function saludo(){
-//     console.log("hellow world");
-// }
-// saludo();
+// funcion declarada
+function saludo(){
+    console.log("hellow world");
+}
+saludo();
 
-// // funcion expresada
-// const saludarHola = function(){
-//     console.log("Hola con funcion expresada");
-// }
-// saludarHola();
-
-
-// // Funcion Fecha
-// const saludosFlecha = ()=>{
-//     console.log("Hello con Funcion flecha");
-// }
-// saludosFlecha();
+// funcion expresada
+const saludarHola = function(){
+    console.log("Hola con funcion expresada");
+}
+saludarHola();
 
 
-// // Funcion Anonima
-// setTimeout(function(){
-//     console.log("Ejecutando...")
-// },1000)
+// Funcion Fecha
+const saludosFlecha = ()=>{
+    console.log("Hello con Funcion flecha");
+}
+saludosFlecha();
+
+
+// Funcion Anonima
+setTimeout(function(){
+    console.log("Ejecutando...")
+},1000)
 
 
 
-// // Sintaxis: function nombre(parámetros) { cuerpo }
-// function saludar(nombre) {
-//     return `Hola, ${nombre}!`;
-//   }
+// Sintaxis: function nombre(parámetros) { cuerpo }
+function saludar(nombre) {
+    return `Hola, ${nombre}!`;
+  }
   
-//   console.log(saludar("Ana"));   // "Hola, Ana!"
-//   console.log(saludar("Luis"));  // "Hola, Luis!"
+  console.log(saludar("Ana"));   // "Hola, Ana!"
+  console.log(saludar("Luis"));  // "Hola, Luis!"
 
 
 
-//   //parametros 
-//   function saludarConParametros(nombre){
-//     console.log("Hoal"+nombre)
-//   }
-//   saludarConParametros("Pedro")
+  //parametros 
+  function saludarConParametros(nombre){
+    console.log("Hoal"+nombre)
+  }
+  saludarConParametros("Pedro")
 
-//   function sumar(a,b){
-//     return a+b;
-//   }
-//   resutaldo = sumar(45,5);
-//   console.log(resutaldo) 
-
-
+  function sumar(a,b){
+    return a+b;
+  }
+  resutaldo = sumar(45,5);
+  console.log(resutaldo) 
 
 
 
 
 
-//   // Sintaxis completa
-// const sumar2 = (a, b) => {
-//   return a + b;
-// };
-
-// // Retorno implícito — cuando el cuerpo es una sola expresión
-// // se omiten las llaves y la palabra return
-// const sumarCorto = (a, b) => a + b;
-
-// // Un solo parámetro — se pueden omitir los paréntesis
-// const doblar = n => n * 2;
-
-// // Sin parámetros — los paréntesis son obligatorios
-// const saludarMundo = () => "Hola, mundo!";
-
-// console.log(sumar2(3, 4));        // 7
-// console.log(sumarCorto(3, 4));   // 7
-// console.log(doblar(5));          // 10
-// console.log(saludarMundo());     // "Hola, mundo!"
 
 
-// // determinar si es par o no par 
-// const numpar = n => n % 2 === 0;
-// console.log(numpar(2));
-// console.log(numpar(7));
+  // Sintaxis completa
+const sumar2 = (a, b) => {
+  return a + b;
+};
+
+// Retorno implícito — cuando el cuerpo es una sola expresión
+// se omiten las llaves y la palabra return
+const sumarCorto = (a, b) => a + b;
+
+// Un solo parámetro — se pueden omitir los paréntesis
+const doblar = n => n * 2;
+
+// Sin parámetros — los paréntesis son obligatorios
+const saludarMundo = () => "Hola, mundo!";
+
+console.log(sumar2(3, 4));        // 7
+console.log(sumarCorto(3, 4));   // 7
+console.log(doblar(5));          // 10
+console.log(saludarMundo());     // "Hola, mundo!"
 
 
-// // parametro por defecto
-// function saludar(nombre = "mundo", saludo = "Hola") {
-//   return `${saludo}, ${nombre}!`;
-// }
-
-// console.log(saludar());                     // "Hola, mundo!"
-// console.log(saludar("Ana"));               // "Hola, Ana!"
-// console.log(saludar("Ana", "Buenos días")); // "Buenos días, Ana!"
-
-// // También funciona con arrow functions
-// const potencia = (base, exponente = 2) => base ** exponente;
-
-// console.log(potencia(3));     // 9   (3²)
-// console.log(potencia(3, 3));  // 27  (3³)
+// determinar si es par o no par 
+const numpar = n => n % 2 === 0;
+console.log(numpar(2));
+console.log(numpar(7));
 
 
-// // ejercico en clase 
+// parametro por defecto
+function saludar(nombre = "mundo", saludo = "Hola") {
+  return `${saludo}, ${nombre}!`;
+}
 
-// const area = (base = 3, altura = 5) => base * altura/2;
-// console.log (area(4,3));
+console.log(saludar());                     // "Hola, mundo!"
+console.log(saludar("Ana"));               // "Hola, Ana!"
+console.log(saludar("Ana", "Buenos días")); // "Buenos días, Ana!"
+
+// También funciona con arrow functions
+const potencia = (base, exponente = 2) => base ** exponente;
+
+console.log(potencia(3));     // 9   (3²)
+console.log(potencia(3, 3));  // 27  (3³)
+
+
+// ejercico en clase 
+
+const area = (base = 3, altura = 5) => base * altura/2;
+console.log (area(4,3));
 
 
 //Parámetro rest (...)
@@ -200,11 +200,11 @@ function operar(a, b, operacion) {
   return operacion(a, b);
 }
 
-const sumar   = (a, b) => a + b;
+const sumar3   = (a, b) => a + b;
 const restar  = (a, b) => a - b;
 const multiplicar = (a, b) => a * b;
 
-console.log(operar(10, 3, sumar));        // 13
+console.log(operar(10, 3, sumar3));        // 13
 console.log(operar(10, 3, restar));       // 7
 console.log(operar(10, 3, multiplicar));  // 30
 
