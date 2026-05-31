@@ -4,7 +4,7 @@ const calcularSubtotal  = (costo, participantes) => costo * participantes;
 const calcularDescuento = (subtotal, esGrupo)    => esGrupo ? subtotal * 0.10 : 0;
 const calcularTotal     = (subtotal, descuento)  => subtotal - descuento;
 
-+function calcularCurso(costo, participantes, esGrupo) {
+function calcularCurso(costo, participantes, esGrupo) {
   const operaciones = {
     subtotal:  () => calcularSubtotal(costo, participantes),
     descuento: () => calcularDescuento(calcularSubtotal(costo, participantes), esGrupo),

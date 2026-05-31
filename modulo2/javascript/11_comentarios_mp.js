@@ -16,3 +16,6 @@
 function saludar(nombre) {
   return `Hola, ${nombre}. Bienvenido al sistema de Control de Cursos de Sacramentos de la Iglesia Católica.`;
 }
+
+console.log(saludar("Roberto"));
+
