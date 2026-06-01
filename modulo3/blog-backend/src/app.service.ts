@@ -1,6 +1,8 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, InternalServerErrorException } from '@nestjs/common';
 import { ProductDto } from './product.dto';
 import { find } from 'rxjs/internal/operators/find';
+import axios from 'axios';
+import { SendMailDto } from './mail/dto/send-mail.dto';
 
 @Injectable()
 export class AppService {
@@ -78,4 +80,34 @@ export class AppService {
     "areaTriangulo": area,
     };
   }
+
+
+  async fetchUserListFromPublicApi() {
+    const res = await axios.get('https://jsonplaceholder.typicode.com/users');
+    return res.data;
+  }
+
+  async sendWithSendGrid(dto: SendMailDto) {
+  try {
+    const res = await axios.post(
+      'https://api.sendgrid.com/v3/mail/send',
+      {
+        personalizations: [{ to: [{ email: dto.to }] }],
+        from: { email: process.env.SENDGRID_SENDER },
+        subject: dto.subject,
+        content: [{ type: 'text/html', value: dto.message }],
+      },
+      {
+        headers: {
+          Authorization: `Bearer ${process.env.SENDGRID_API_KEY}`,
+          'Content-Type': 'application/json',
+        },
+      },
+    );
+
+    return { status: res.status };
+  } catch (error) {
+    throw new InternalServerErrorException('No se pudo enviar el correo con SendGrid');
+  }
+}
 }

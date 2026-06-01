@@ -2,9 +2,12 @@ import { Body, Controller, Delete, Get, Param, Post, Put, UseGuards } from '@nes
 import { AppService } from './app.service';
 import { ProductDto } from './product.dto';
 import { JwtAuthGuard } from './auth/guards/jwt-auth.guard';
+import { SuccessResponseDto } from './common/dto/response.dto';
+import { SendMailDto } from './mail/dto/send-mail.dto';
 
 @Controller()
 export class AppController {
+  mailService: any;
   constructor(private readonly appService: AppService) {}
 
   @Get("/health")
@@ -46,4 +49,15 @@ export class AppController {
   areaTriangulo(@Body() data: any): any {
   return this.appService.areaTriangulo(data);
   }
+
+  @Get('public-api')
+  async getUsersFromPublicApi() {
+    const result = await this.mailService.fetchUserListFromPublicApi();
+    return new SuccessResponseDto('Usuarios obtenidos', result);   
+}
+@Post('sendgrid')
+async sendSendGrid(@Body() dto: SendMailDto) {
+  const result = await this.mailService.sendWithSendGrid(dto);
+  return new SuccessResponseDto('Correo enviado con SendGrid', result);
+}
 }
