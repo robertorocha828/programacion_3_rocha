@@ -8,12 +8,10 @@ import { SuccessResponseDto } from 'src/common/dto/response.dto';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { diskStorage } from 'multer';
 
-
 @Controller('users')
 @UseGuards(JwtAuthGuard)
 export class UsersController {
   constructor(private readonly usersService: UsersService) { }
-
 
   @Post()
   async create(@Body() dto: CreateUserDto) {
@@ -21,13 +19,11 @@ export class UsersController {
     return new SuccessResponseDto('User created successfully', user);
   }
 
-
   @Get()
   async findAll(@Query() query: QueryDto) {
     const result = await this.usersService.findAll(query);
     return new SuccessResponseDto('Users retrieved successfully', result);
   }
-
 
   @Get(':id')
   async findOne(@Param('id') id: string) {
@@ -36,7 +32,6 @@ export class UsersController {
     return new SuccessResponseDto('User retrieved successfully', user);
   }
 
-
   @Put(':id')
   async update(@Param('id') id: string, @Body() dto: UpdateUserDto) {
     const user = await this.usersService.update(id, dto);
@@ -44,14 +39,12 @@ export class UsersController {
     return new SuccessResponseDto('User updated successfully', user);
   }
 
-
   @Delete(':id')
   async remove(@Param('id') id: string) {
     const user = await this.usersService.remove(id);
     if (!user) throw new NotFoundException('User not found');
     return new SuccessResponseDto('Category deleted successfully', user);
   }
-
 
   @Put(':id/profile')
   @UseInterceptors(FileInterceptor('profile', {
@@ -78,4 +71,4 @@ export class UsersController {
     return new SuccessResponseDto('Profile image updated', user);
   }
 }
-
+  

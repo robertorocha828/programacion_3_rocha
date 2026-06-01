@@ -3,7 +3,7 @@ import { InjectModel } from '@nestjs/mongoose';
 import { Model, Types } from 'mongoose';
 import { Curso } from './schemas/curso.schema';
 import { Contenido } from './schemas/contenido.schema';
-import { CreateCursoDto } from './dto/create-contenido.dto.ts';
+import { CreateCursoDto } from './dto/create-curso.dto';
 
 @Injectable()
 export class CursosService {

@@ -89,6 +89,7 @@ export class UsersService {
   }
 
   async findByUsername(username: string) {
+    return this.userRepository.findOne({ where: { username } });
   }
 
   async update(id: string, updateUserDto: UpdateUserDto) {
@@ -108,7 +109,6 @@ export class UsersService {
     if (!user) return null;
     return this.userRepository.remove(user);
   }
-
 
   async updateProfile(id: string, profile: string) {
     const user = await this.userRepository.findOne({ where: { id: id } });
