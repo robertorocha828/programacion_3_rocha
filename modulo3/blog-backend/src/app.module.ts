@@ -8,7 +8,7 @@ import { UsersModule } from './users/users.module';
 import { CategoriesModule } from './categories/categories.module';
 import { PostsModule } from './posts/posts.module';
 import { MailModule } from './mail/mail.module';
-import { CursosModule } from './cursos/cursos.controller';
+import { CursosModule } from './cursos/cursos.module';
 import { MongooseModule } from '@nestjs/mongoose';
 
 @Module({
@@ -24,7 +24,7 @@ import { MongooseModule } from '@nestjs/mongoose';
       database: process.env.DB_NAME,
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: true,
-      ssl: { rejectUnauthorized: false },
+      ssl: process.env.DB_SSL === 'true' ? { rejectUnauthorized: false } : false,
     }),
     AuthModule,
     UsersModule,
