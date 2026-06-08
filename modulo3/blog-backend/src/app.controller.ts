@@ -5,6 +5,7 @@ import { JwtAuthGuard } from './auth/guards/jwt-auth.guard';
 import { SuccessResponseDto } from './common/dto/response.dto';
 import { SendMailDto } from './mail/dto/send-mail.dto';
 
+
 @Controller()
 export class AppController {
   mailService: any;
@@ -55,9 +56,9 @@ export class AppController {
     const result = await this.mailService.fetchUserListFromPublicApi();
     return new SuccessResponseDto('Usuarios obtenidos', result);   
 }
-@Post('sendgrid')
-async sendSendGrid(@Body() dto: SendMailDto) {
-  const result = await this.mailService.sendWithSendGrid(dto);
-  return new SuccessResponseDto('Correo enviado con SendGrid', result);
+  @Post('sendgrid')
+  async sendSendGrid(@Body() dto: SendMailDto) {
+    const result = await this.mailService.sendWithSendGrid(dto);
+    return new SuccessResponseDto('Correo enviado con SendGrid', result);
 }
 }
