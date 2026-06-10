@@ -17,8 +17,6 @@ document.getElementById('btn3').addEventListener('click', () => {
 });
 
 
-
-
 function cambiarParrafo() {
   const mensaje = document.getElementById("mensaje");
   mensaje.textContent = "Texto modificado";
@@ -31,3 +29,21 @@ function cambiar() {
   titulo.textContent = "Chao";
   console.log("Titulo:", titulo);
 }
+
+
+document.getElementById('campo')
+  .addEventListener('input',()=>{
+    console.log('Valor del campo:',
+      document.getElementById('campo').value);
+    
+});
+
+
+document.getElementById('campo')
+  .addEventListener('input',()=>{
+    const valorCampo = document
+    .getElementById('campo_actualizar_parrafo').value;
+    document.getElementById('parrafo')
+    .textContent = 
+    `Valor actualizado: ${valorCampo}` 
+});
