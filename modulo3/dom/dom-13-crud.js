@@ -2,20 +2,20 @@ const productos = [
     {
         "id": 1,
         "nombre": "Teclado",
-        "descripcion": "Teclado mecánico",
-        "precio": 40.99
+        "apellido": "Teclado mecánico",
+        "sueldo": 40.99
     },
     {
         "id": 2,
         "nombre": "Mouse",
-        "descripcion": "Mouse",
-        "precio": 19.99
+        "apellido": "Mouse",
+        "sueldo": 19.99
     },
     {
         "id": 3,
         "nombre": "Monitor",
-        "descripcion": "Monitor 19 pulgadas",
-        "precio": 500.49
+        "apellido": "Monitor 19 pulgadas",
+        "sueldo": 500.49
     }
 ];
 

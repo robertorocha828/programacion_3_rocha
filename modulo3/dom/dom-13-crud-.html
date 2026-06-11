@@ -84,43 +84,25 @@
 <body>
     <h1 id="titulo">Eventos del DOM</h1>
     <h2>CRUD de Productos</h2>
-    <div id="stats">
-        <div class="stat-card">
-            <h3>Total Productos</h3>
-            <p id="totalProductos">0</p>
-        </div>
-        <div class="stat-card">
-            <h3>Precio Promedio</h3>
-            <p id="precioPromedio">0</p>
-        </div>
-        <div class="stat-card">
-            <h3>Producto Más Caro</h3>
-            <p id="productoMasCaro">N/A</p>
-        </div>
-        <div class="stat-card">
-            <h3>Producto Más Barato</h3>
-            <p id="productoMasBarato">N/A</p>
-        </div>
-    </div>
+   
     <div>
         <h3>Agregar nuevo producto</h3>
         <label for="nombre">NOmbre:</label>
-        <input type="text" id="nombre" placeholder="Nombre del producto">
-        <label for="descripcion">Descripcion:</label>
-        <input type="text" id="descripcion" placeholder="Descripcion del producto">
-        <label for="precio">Precio:</label>
-        <input type="text" id="precio" placeholder="Precio del producto">
-        <button id="btn_agregar" class="btn-agregar">Agregar Producto </button>
-        <button id="btn_cancelar" class="btn-cancelar">Cancelar</button>
+        <input type="text" id="nombre" placeholder="Ingrese el nombre">
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" placeholder="Ingrese el apellido">
+        <label for="sueldo">Sueldo:</label>
+        <input type="text" id="sueldo" placeholder="Ingrese el sueldo">
+        <!-- <button id="btn_agregar" class="btn-agregar">Agregar Producto </button>
+        <button id="btn_cancelar" class="btn-cancelar">Cancelar</button> -->
     </div>
     <table>
         <thead>
             <tr>
+                <th>Id</th>
                 <th>Nombre</th>
                 <th>Apellido</th>
                 <th>Sueldo</th>
-                <th>Precio</th>
-                <th>Acciones</th>
             </tr>
         </thead>
         <tbody id="cuerpoTabla"></tbody>
