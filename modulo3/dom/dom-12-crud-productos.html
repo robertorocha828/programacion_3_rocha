@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulación de DOM</title>
+    <script src="dom-12-crud-productos.js" defer></script>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 20px;
+        }
+        h2{
+            color: black;
+        }
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th,td{
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+
+        }
+        tr:nth-child(even){
+            background-color: aliceblue;
+        }
+        .formulario{
+            background-color: rgb(5, 123, 226);
+            border: 1px solid #b0fce8;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .formulario input{
+            margin: 5px;
+            padding: 8px;
+            width: 200px;
+        }
+        .formulario input{
+            width: 100px;
+            padding: 5px;
+            margin-bottom: 8px;
+        }
+        .btn-agregar:hover{
+            background-color: aquamarine;
+            color: white;
+        }
+        .btn-cancelar:hover{
+            background-color: rgb(255, 185, 127);
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 id="titulo">Eventos del DOM</h1>
+    <h2>CRUD de Productos</h2>
+    <div>
+        <h3>Agregar nuevo producto</h3>
+        <label for="nombre">NOmbre:</label>
+        <input type="text" id="nombre" placeholder="Nombre del producto">
+        <label for="descripcion">Descripcion:</label>
+        <input type="text" id="descripcion" placeholder="Descripcion del producto">
+        <label for="precio">Precio:</label>
+        <input type="text" id="precio" placeholder="Precio del producto">
+        <button id="btn_agregar" class="btn-agregar">Agregar Producto </button>
+        <button id="btn_cancelar" class="btn-cancelar">Cancelar</button>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Descripcion</th>
+                <th>Precio</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="cuerpoTabla"></tbody>
+    </table>
+
+
+</body>
+</html>
+
+
+
+</body>
+
+</html>
