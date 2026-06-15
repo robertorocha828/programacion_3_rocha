@@ -1,3 +1,5 @@
+const { act } = require("react");
+
 const productos = [
     {
         "id": 1,
@@ -59,6 +61,7 @@ function agregarProducto() {
     productos.push(nuevoProducto);
     renderProductos();
     limpiarFormulario();
+    actualizarEstadisticas();
 }
 
 function limpiarFormulario() {
@@ -105,6 +108,7 @@ function actualizarProducto() {
         };
         renderProductos();
         limpiarFormulario(),
+        actualizarEstadisticas();
             agregarBtn.textContent = 'Agregar producto';
         agregarBtn.removeEventListener('click', actualizarProducto);
         agregarBtn.addEventListener('click', agregarProducto)
@@ -130,6 +134,7 @@ function eliminarProducto(id) {
         if (confirm('¿Está seguro de eliminar este producto?')) {
             productos.splice(index, 1);
             renderProductos();
+            actualizarEstadisticas();
         }
     }
 }
