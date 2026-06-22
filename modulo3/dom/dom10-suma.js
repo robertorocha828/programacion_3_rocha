@@ -1,4 +1,4 @@
-const campoNuemro1 = document.getElementById(campo_nuemro1);
+const campoNuemro1 = document.getElementById(campo_nuemero1);
 const campoNuemro2 = document.getElementById(campo_nuemro2);
 const btnSumar = document.getElementById('btn_sumar');
 const resultado = document.getElementById('resultado');

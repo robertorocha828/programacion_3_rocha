@@ -11,6 +11,8 @@ import StatusBadge         from './components/StatusBadge'
 import MiniProfileCard     from './components/MiniProfileCard'
 import SimpleInfoTable     from './components/SimpleInfoTable'
 import VehiculosTable      from './components/VehiculosTable'
+import DigitalCounter from './components/DigitalCounter'
+import UserProfileForm from './components/UserProfileForm'
 
 
 
@@ -30,7 +32,7 @@ import VehiculosTable      from './components/VehiculosTable'
 // │  12  ProductCatalogList  — lista con renderizado condicional de items   │
 // │  13  UserProfileCard     — ejercicio: props complejas + rol             │
 // └──────────────────────────────────────────────────────────────────────────┘
-const PASO = 11
+const PASO = 12
 
 const fruits = [
   { name: 'Manzana', emoji: '🍎', inSeason: true, calories: 52 },
@@ -101,20 +103,33 @@ export default function App() {
       />
     ) :
 
-    PASO === 11 ? (
-      <VehiculosTable
-        title="Resumen del pedido de Vehiculos"
-        rows={[
-          { label: 'Marca',  value: 'Chevrolet' },
-          { label: 'Modelo',     value: 'D-Max' },
-          { label: 'Precio', value: '$25.000' },
-          { label: 'IVA', value: '$250' },
-          { label: 'Total',     value: '$25.250', highlight: true },
-        ]}
-      />
-    ) :
+    // PASO === 11 ? (
+    //   <VehiculosTable
+    //     title="Resumen del pedido de Vehiculos"
+    //     rows={[
+    //       { label: 'Marca',  value: 'Chevrolet' },
+    //       { label: 'Modelo',     value: 'D-Max' },
+    //       { label: 'Precio', value: '$25.000' },
+    //       { label: 'IVA', value: '$250' },
+    //       { label: 'Total',     value: '$25.250', highlight: true },
+    //     ]}
+    //   />
+    // ) :
 
+    PASO === 11 ? (
+      <DigitalCounter
+        label="Contador desde tsx"
+        step={1}
+      />
+    ):
+
+    PASO === 12 ? (
+      <UserProfileForm
+      />
+    ):
+    (
       <p style={{ color: '#e00' }}>Paso {PASO}: crea el componente primero</p>
+    )
 
   return (
     <main style={{ maxWidth: 540, margin: '40px auto', fontFamily: 'sans-serif', padding: '0 16px' }}>
