@@ -42,7 +42,7 @@ export default function DigitalCounter({
         Reset
       </button><br />
       <div>
-        <p>Otro contador</p>
+        <p>Otro contador {count}</p>
       </div>
 
     </div>
