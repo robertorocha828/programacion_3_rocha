@@ -1,14 +1,14 @@
 // src/App.tsx
 
-//import { ThemeProvider }    from './theme/ThemeContext'
+import { ThemeProvider }    from './theme/ThemeContext'
 import CssGlobalDemo        from './components/CssGlobalDemo'
-// import InlineStyleDemo      from './components/InlineStyleDemo'
+import InlineStyleDemo      from './components/InlineStyleDemo'
 import CssModuleDemo        from './components/CssModuleDemo'
-// import StyledComponentsDemo from './components/StyledComponentsDemo'
-// import LiveStyleEditor      from './components/LiveStyleEditor'
-// import HoverDemo            from './components/HoverDemo'
-// import ThemePanel           from './components/ThemePanel'
-// import './theme/theme.css'
+import StyledComponentsDemo from './components/StyledComponentsDemo'
+import LiveStyleEditor      from './components/LiveStyleEditor'
+import HoverDemo            from './components/HoverDemo'
+import ThemePanel           from './components/ThemePanel'
+import './theme/theme.css'
 
 // ┌──────────────────────────────────────────────────────────────────────┐
 // │  Cambia PASO y guarda (Ctrl+S) para navegar entre componentes.      │
@@ -20,7 +20,7 @@ import CssModuleDemo        from './components/CssModuleDemo'
 // │  6  HoverDemo            — hook useHover para efectos hover         │
 // │  7  ThemePanel           — Context + CSS variables para theming     │
 // └──────────────────────────────────────────────────────────────────────┘
-const PASO = 3
+const PASO = 7
 
 export default function App() {
   const content =
@@ -34,9 +34,10 @@ export default function App() {
     <p style={{ color: '#e00' }}>Paso {PASO}: crea el componente primero</p>
 
   return (
-  
+    <ThemeProvider>
       <main style={{ maxWidth: 640, margin: '0 auto', padding: '32px 16px' }}>
         {content}
       </main>
+    </ThemeProvider>
   )
 }
