@@ -2,7 +2,7 @@
 
 import { Container, Card, ListGroup } from 'react-bootstrap'
 
-export default function AboutRB() {
+export default function ProyectsRB() {
   return (
     <Container className="py-5" style={{ maxWidth: 600 }}>
       <h1 className="h3 fw-bold mb-4">Mis Proyectos</h1>
