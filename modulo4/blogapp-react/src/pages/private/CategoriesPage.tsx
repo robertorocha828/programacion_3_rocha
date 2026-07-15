@@ -22,7 +22,6 @@ export default function CategoriesPage() {
 
   useEffect(() => { load() }, [])
 
-  
   const handleDelete = async () => {
     if (!deleteTarget) return
     await deleteCategory(deleteTarget.id)
@@ -30,6 +29,7 @@ export default function CategoriesPage() {
     setDeleteTarget(null)
     load()
   }
+
 
   return (
     <div className="mx-auto max-w-2xl space-y-4 p-8">
