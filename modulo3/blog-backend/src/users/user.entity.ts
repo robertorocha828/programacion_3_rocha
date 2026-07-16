@@ -11,7 +11,7 @@ export class User {
   @Column()
   email?: string;
 
-  @Column()
+  @Column({ default: true })
   password?: string;
 
   @Column({ default: true })
@@ -19,4 +19,10 @@ export class User {
 
   @Column({ nullable: true })
   profile?: string;
+
+  @Column({ type:'varchar', unique: true, nullable: true })
+  googleId?: string | null;
+
+  @Column({ type: 'varchar', nullable: true })
+  avatarUrl?: string | null;
 }
