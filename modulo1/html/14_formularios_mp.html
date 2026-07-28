@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+    <h1>Formulario de Inscripción a Cursos de Sacramentos</h1>
+    <form action="/inscribir" method="post">
+        <table>
+            <tr>
+                <td>
+                    <label for="nombre">Nombre:</label><br>
+                    <input type="text" name="nombre" id="nombre">
+                </td>
+                <td>
+                    <label for="apellido">Apellido:</label><br>
+                    <input type="text" name="apellido" id="apellido">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="email">Correo Electrónico:</label><br>
+                    <input type="email" id="email" name="email">
+                </td>
+                <td>
+                    <label for="telefono">Teléfono:</label><br>
+                    <input type="tel" name="telefono" id="telefono">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="cedula">Número de Cédula:</label><br>
+                    <input type="number" name="cedula" id="cedula">
+                </td>
+                <td>
+                    <label for="fecha_nacimiento">Fecha de Nacimiento:</label><br>
+                    <input type="date" name="fecha_nacimiento" id="fecha_nacimiento">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="hora_preferida">Horario preferido:</label><br>
+                    <input type="time" name="hora_preferida" id="hora_preferida">
+                </td>
+                <td>
+                    <label for="fecha_inicio">Fecha de inicio del curso:</label><br>
+                    <input type="month" name="fecha_inicio" id="fecha_inicio">
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2"><h3>Selección y opciones</h3></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="acepto" id="acepto">
+                    <label for="acepto">Acepto los términos y condiciones del curso</label>
+                </td>
+                <td>
+                    <fieldset>
+                        <legend>Método de pago</legend>
+                        <input type="radio" name="pago" id="efectivo" value="efectivo">
+                        <label for="efectivo">Efectivo</label>
+                        <input type="radio" name="pago" id="transferencia" value="transferencia">
+                        <label for="transferencia">Transferencia</label>
+                        <input type="radio" name="pago" id="deposito" value="deposito">
+                        <label for="deposito">Depósito</label>
+                    </fieldset>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2"><h3>Documentos requeridos</h3></td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="foto">Foto del inscrito:</label><br>
+                    <input type="file" name="foto" id="foto" accept="image/">
+                </td>
+                <td>
+                    <label for="documentos">Partida de nacimiento:</label><br>
+                    <input type="file" name="documentos" id="documentos" accept=".pdf">
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2"><h3>Información adicional</h3></td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="observaciones">Observaciones:</label><br>
+                    <textarea name="observaciones" id="observaciones" rows="4" cols="40"
+                        placeholder="Escribe cualquier información adicional aquí"></textarea>
+                </td>
+                <td>
+
+                    <label for="sacramento">Sacramento a recibir:</label><br>
+                    <select name="sacramento" id="sacramento">
+                        <option value="">Seleccione un sacramento</option>
+                        <option value="bautismo">Bautismo</option>
+                        <option value="comunion">Primera Comunión</option>
+                        <option value="confirmacion">Confirmación</option>
+                        <option value="matrimonio">Matrimonio</option>
+                    </select>
+                    <br><br>
+
+                    <label for="parroquia">Parroquia:</label><br>
+                    <select name="parroquia" id="parroquia">
+                        <optgroup label="Quito Norte">
+                            <option value="cotocollao">Cotocollao</option>
+                            <option value="calderon">Calderón</option>
+                        </optgroup>
+                        <optgroup label="Quito Centro">
+                            <option value="san_francisco">San Francisco</option>
+                            <option value="catedral">La Catedral</option>
+                        </optgroup>
+                        <optgroup label="Quito Sur">
+                            <option value="chillogallo">Chillogallo</option>
+                            <option value="solanda">Solanda</option>
+                        </optgroup>
+                    </select>
+                </td>
+            </tr>
+        </table>
+
+        <br>
+        <button type="submit">Inscribirse</button>
+        <button type="reset">Cancelar</button>
+    </form>
+    
+</body>
+</html>

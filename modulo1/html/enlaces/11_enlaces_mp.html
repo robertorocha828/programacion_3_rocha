@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enlaces</title>
+</head>
+<body>
+    <h1>Enlaces (Link)</h1>
+    <a href="https://www.arquidiocesisdequito.com.ec/">Ir a Arquidiocesis De Quito</a>
+
+    <h1>Tipos HREF</h1>
+    <!--Ubicacion relativa-->
+    <a href="contacto_mp.html">Contacto</a>
+    <br>
+    <a href="contenidos/articulo.html">Primer Articulo</a>
+    <br>
+    <a href="#seccion-contacto">Ir a Contacto</a>
+    <br>
+    <a href="#informacion-general">Infromacion general</a>
+    <br>
+    <a href="contenidos/articulo_mp.html#noticia2">Noticia 2</a>
+    <br>
+    <a href="mailto:sacramentos.quito@gmail.com">Envianos un correo</a>
+    <br>
+    <a href="mailto:sacramentos.quito@gmail.com?subject=Consulta&body=Hola, por favor informacion sobre ....">Email con asunto predeterminado</a>
+    <br>
+    <a href="tel:+593999999999">Llamanos ahora</a>
+    <br>
+    <a href="Sacramentos.pdf">Descargar</a>
+    <br>
+    <h1>Atributos target</h1>
+    <a href="https://www.arquidiocesisdequito.com.ec/" target="_self">Misma pestaña</a>
+    <br>
+    <a href="https://www.arquidiocesisdequito.com.ec/" target="_blank">Nueva pestaña</a>
+
+
+    <section id="informacion-general">
+        <h2> Información de la página </h2>
+        <p>El Sistema de Control de Cursos de Sacramentos permite registrar, gestionar y dar seguimiento
+            a los participantes de los cursos de preparación para recibir los sacramentos en la Iglesia Católica Ecuatoriana.</p>
+        <h2> Reglas de negocio </h2>
+        <p>Todo participante debe completar el curso correspondiente antes de recibir el sacramento.
+            La asistencia mínima obligatoria es del 80% de las sesiones. En caso de no cumplirla, el participante
+            debe reiniciar el curso en el siguiente período disponible.</p>
+        <h2> Reporteros Parroquiales </h2>
+
+        <p>La Parroquia San Juan Bautista de Sangolquí celebró con gran éxito una nueva edición del EXPOCARISMA, una iniciativa que 
+            año tras año se ha convertido en un espacio clave para fortalecer la vida pastoral y promover las vocaciones en la 
+            Arquidiócesis de Quito.
+            Bajo el lema “¡Peregrinos de Esperanza respondiendo con alegría a su llamado!”, la jornada de este año estuvo en plena 
+            sintonía con el Jubileo 2025, convocado por el Papa Francisco. En este contexto, EXPOCARISMA buscó inspirar a los fieles 
+            a vivir su fe con alegría y a responder al llamado de Dios en sus vidas, ya sea en la vida laical comprometida o en la 
+            vocación sacerdotal y religiosa.
+            Este evento lo organiza la parroquia todos los años y en esta oportunidad contó con la presencia de la Conferencia 
+            Ecuatoriana de Religiosas y Religiosos (CER) y la Pastoral Vocacional de la Arquidiócesis de Quito, que acompañaron 
+            a los distintos grupos pastorales de la parroquia en la presentación de sus carismas. Más allá de ser una exhibición de 
+            la labor eclesial, EXPOCARISMA se convirtió en una oportunidad para promover las vocaciones y sus distintos carismas.</p>
+
+    </section>
+
+    <section id="seccion-contacto">
+        <h2> Sección de Contacto </h2>
+        <p> Este bloque tiene el id <code>seccion-contacto</code></p>
+        <p> Por eso el enalce <code> &lt;a href="#seccion-contacto"&gt;</code> lleva directamente aquí </p>
+        <p> Email: sacramentos.quito@gmail.com  </p>
+        <p> Telefono: +593999999999 </p>
+        <a href="#informacion-general"> Mas información </a> 
+    </section>
+    
+</body>
+</html>

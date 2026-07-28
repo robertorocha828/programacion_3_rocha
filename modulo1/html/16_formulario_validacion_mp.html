@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <h1>Inscripción Sacramentos</h1>
+    <form action="/inscribir" method="post">
+
+        <fieldset>
+            <legend>Campo obligatorio</legend>
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" name="nombre" id="nombre" required>
+        </fieldset>
+        <fieldset>
+            <legend>Observaciones</legend>
+            <label for="observacion">Observación (10 a 200 caracteres):</label>
+            <input type="text" name="observacion" id="observacion" minlength="10" maxlength="200">
+        </fieldset>
+
+        <fieldset>
+            <legend>Cédular</legend>
+            <label for="cedula">Cédula de identidad (10 dígitos):</label>
+            <input type="text" name="cedula" id="cedula" pattern="[0-9]{10}"
+                title="Ingrese los 10 dígitos de su cédula">
+        </fieldset>
+
+
+        <fieldset>
+            <legend>Edad</legend>
+            <label for="edad">Edad del participante:</label>
+            <input type="number" name="edad" id="edad" min="0" max="100">
+        </fieldset>
+
+        <fieldset>
+            <legend>Deshabilitado</legend>
+            <label for="codigo">Código de inscripción:</label>
+            <input type="text" name="codigo" id="codigo" value="SAC-2026-001" disabled>
+        </fieldset>
+
+        <fieldset>
+            <legend>Solo lectura</legend>
+            <label for="pais">País:</label>
+            <input type="text" name="pais" id="pais" value="Ecuador" readonly>
+        </fieldset>
+
+        <button type="submit">Validar y enviar</button>
+        <button type="reset">Limpiar</button>
+    </form>
+    
+</body>
+</html>
